@@ -1,9 +1,9 @@
 spring:
   datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/umc7th
+    url: jdbc:mysql://localhost:3306/study
     username: root
     password: qwer1234
+    driver-class-name: com.mysql.cj.jdbc.Driver
   sql:
     init:
       mode: never

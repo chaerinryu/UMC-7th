@@ -1,10 +1,9 @@
 package umc.spring.domain;
 
-import jakarta.persistence.*;
 import lombok.*;
-import umc.spring.domain.common.BaseEntity;
 import umc.spring.domain.mapping.MemberPrefer;
 
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,7 +12,7 @@ import java.util.List;
 @Builder
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
-public class FoodCategory extends BaseEntity {
+public class FoodCategory {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,6 +21,6 @@ public class FoodCategory extends BaseEntity {
     @Column(nullable = false, length = 15)
     private String name;
 
-    @OneToMany(mappedBy = "foodCategory", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "member", cascade = CascadeType.ALL)
     private List<MemberPrefer> memberPreferList = new ArrayList<>();
 }
