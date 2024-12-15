@@ -1,10 +1,7 @@
 package umc.spring.web.dto;
 
+import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
-import umc.spring.validation.annotation.ExistMember;
-import umc.spring.validation.annotation.MissionChallenged;
-
-import javax.validation.constraints.NotNull;
 
 public class MissionRequestDTO {
 
